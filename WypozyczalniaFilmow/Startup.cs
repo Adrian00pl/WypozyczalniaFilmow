@@ -52,6 +52,10 @@ namespace WypozyczalniaFilmow
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
+                    name: "StronyStatyczne",
+                    pattern: "{info/{nazwa}/{action=Index}/{id?}",
+                    defaults: new { controller = "Home", action = "StronyStatyczne" });
+                endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });

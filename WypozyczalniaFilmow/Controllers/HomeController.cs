@@ -9,18 +9,27 @@ using WypozyczalniaFilmow.Models;
 
 namespace WypozyczalniaFilmow.Controllers
 {
+    
     public class HomeController : Controller
     {
+        FilmyContext db;
+
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, FilmyContext db)
         {
             _logger = logger;
+            this.db = db;
         }
 
+        public IActionResult StronyStatyczne(string nazwa)
+        {
+            return View(nazwa);
+        }
         public IActionResult Index()
         {
-            return View();
+            var kategorie = db.Kategorie.ToList();
+            return View(kategorie);
         }
 
         public IActionResult Privacy()
@@ -33,5 +42,6 @@ namespace WypozyczalniaFilmow.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

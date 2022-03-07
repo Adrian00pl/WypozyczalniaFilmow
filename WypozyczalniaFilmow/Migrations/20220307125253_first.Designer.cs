@@ -10,8 +10,8 @@ using WypozyczalniaFilmow.Models;
 namespace WypozyczalniaFilmow.Migrations
 {
     [DbContext(typeof(FilmyContext))]
-    [Migration("20220228125847_Initial")]
-    partial class Initial
+    [Migration("20220307125253_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
