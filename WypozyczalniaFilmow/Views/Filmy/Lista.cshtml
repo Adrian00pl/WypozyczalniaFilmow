@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WypozyczalniaFilmow.Models.Film>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<table>
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Rezyser</th>
+            <th>Data dodania</th>
+            <th>Cena</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var film in Model)
+            {
+                <tr>
+                    <td>@film.Tytul</td>
+                    <td>@film.Rezyser</td>
+                    <td>@film.DataDodania</td>
+                    <td>@film.Cena</td>
+                </tr>
+            }
+    </tbody>
+
+</table>

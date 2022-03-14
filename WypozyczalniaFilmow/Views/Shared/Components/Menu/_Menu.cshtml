@@ -1,0 +1,6 @@
+﻿@model IEnumerable<WypozyczalniaFilmow.Models.Kategoria>
+<header>
+    @foreach (var kategoria in Model){
+        <a href="@Url.Action("Lista","Filmy",new { nazwaKategori = kategoria.Nazwa})">@kategoria.Nazwa</a>
+    }
+</header>
