@@ -18,6 +18,7 @@ namespace WypozyczalniaFilmow.Models
         public decimal Cena { get; set; }
         public DateTime DataDodania { get; set; }
         public int KategoriaId { get; set; }
+        public int DlFilmu { get; set; }
         public Kategoria Kategoria { get; set; }
 
     }

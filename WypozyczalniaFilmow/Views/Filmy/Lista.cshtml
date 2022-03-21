@@ -1,9 +1,49 @@
-﻿@model IEnumerable<WypozyczalniaFilmow.Models.Film>
+﻿@model WypozyczalniaFilmow.Models.FilmyKategorie
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<H1>Top 3 filmy</H1>
+<table>
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Opis</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var film in Model.FilmyNajnowsze)
+        {
+            <tr>
+                <td>@film.Tytul</td>
+                <td>@film.Opis</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<H1>Top 3 najdluzsze filmy</H1>
+<table>
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Opis</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var film in Model.FilmyNajdluzsze)
+        {
+            <tr>
+                <td>@film.Tytul</td>
+                <td>@film.Opis</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<H1>Filmy</H1>
 <table>
     <thead>
         <tr>
@@ -11,18 +51,21 @@
             <th>Rezyser</th>
             <th>Data dodania</th>
             <th>Cena</th>
+            <th>Dlugosc</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var film in Model)
-            {
-                <tr>
-                    <td>@film.Tytul</td>
-                    <td>@film.Rezyser</td>
-                    <td>@film.DataDodania</td>
-                    <td>@film.Cena</td>
-                </tr>
-            }
+        @foreach (var film in Model.FilmyKategoria)
+        {
+        <tr>
+            <td>@film.Tytul</td>
+            <td>@film.Rezyser</td>
+            <td>@film.DataDodania</td>
+            <td>@film.Cena</td>
+            <td>@film.DlFilmu</td>
+            <td><a href="@Url.Action("Szczegoly","Filmy",new { idFilmu= film.Id})">Szczegoly</a></td>
+        </tr>
+        }
     </tbody>
 
 </table>

@@ -73,8 +73,17 @@ ul{
     display:flex;
     flex-direction:row;
     list-style:none;
-    justify-content:center;
+    justify-content:space-around;
+    
 }
-li{
-    margin-right:40px;
+table{
+    border: solid 1px black;
+}
+header {
+    display:flex;
+    justify-content:center;
+    width:100%
+}
+a {
+    margin-right:20px;
 }
