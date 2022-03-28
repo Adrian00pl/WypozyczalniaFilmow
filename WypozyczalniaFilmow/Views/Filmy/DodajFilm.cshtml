@@ -1,0 +1,50 @@
+﻿@model WypozyczalniaFilmow.Models.DodawanieViewModel
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+@{Layout = "_Layout";
+
+}
+@using (Html.BeginForm("DodajFilm","Filmy",FormMethod.Post))
+            {
+<table>
+    <tr>
+        <td>
+            Rezyzer:
+        </td>
+        <td>
+            @Html.TextBoxFor(f => f.Film.Rezyser)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Tytul:
+        </td>
+        <td>
+            @Html.TextBoxFor(f => f.Film.Tytul)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Opis:
+        </td>
+        <td>
+            @Html.TextBoxFor(f => f.Film.Opis)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Cena:
+        </td>
+        <td>
+            @Html.TextBoxFor(f => f.Film.Cena)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Rezyzer:
+        </td>
+        <td>
+            @Html.TextBoxFor(f => f.Film.DlFilmu)
+        </td>
+    </tr>
+</table>
+            }

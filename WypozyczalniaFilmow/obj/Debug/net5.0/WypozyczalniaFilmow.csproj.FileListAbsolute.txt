@@ -146,3 +146,4 @@ C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Filmy\Lista.cshtml.g.cs
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Shared\Components\Menu\_Menu.cshtml.g.cs
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Filmy\Szczegoly.cshtml.g.cs
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Filmy\Wszystkie.cshtml.g.cs

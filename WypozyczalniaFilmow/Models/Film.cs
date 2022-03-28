@@ -20,6 +20,7 @@ namespace WypozyczalniaFilmow.Models
         public int KategoriaId { get; set; }
         public int DlFilmu { get; set; }
         public Kategoria Kategoria { get; set; }
+        public String Plakat { get; set; }
 
     }
 }

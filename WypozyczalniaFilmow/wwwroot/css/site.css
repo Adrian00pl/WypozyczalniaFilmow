@@ -87,3 +87,12 @@ header {
 a {
     margin-right:20px;
 }
+td, th {
+    border: solid 1px black;
+}
+img{
+    width:200px;
+    height:auto;
+}
+images{
+}
