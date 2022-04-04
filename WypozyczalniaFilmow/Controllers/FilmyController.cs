@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WypozyczalniaFilmow.Models;
@@ -11,10 +13,12 @@ namespace WypozyczalniaFilmow.Controllers
     public class FilmyController :Controller
     {
         FilmyContext db;
+        IWebHostEnvironment webHostEnvironment;
 
-        public FilmyController(FilmyContext db)
+        public FilmyController(FilmyContext db, IWebHostEnvironment webHostEnvironment)
         {
             this.db = db;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
@@ -43,15 +47,25 @@ namespace WypozyczalniaFilmow.Controllers
             var filmy = db.Filmy.ToList();
             return View(filmy);
         }
+        [HttpGet]
         public IActionResult DodajFilm()
         {
-            DodawanieViewModel dodaj = new DodawanieViewModel;
+            DodawanieViewModel dodaj = new DodawanieViewModel();
             var kategorie = db.Kategorie.ToList();
             dodaj.Kategorie = kategorie;
             return View(dodaj);
         }
-        public IActionResult DodajFilm(DodawanieViewModel  obj)
+        [HttpPost]
+        public ActionResult DodajFilm(DodawanieViewModel  obj)
         {
+            var filePath = Path.Combine(webHostEnvironment.WebRootPath, "Grafiki");
+            var uniqePosterName = Guid.NewGuid() + "_" + obj.Plakat.FileName;
+            var picFilePath = Path.Combine(filePath, uniqePosterName);
+            obj.Plakat.CopyTo(new FileStream(picFilePath, FileMode.Create));
+            obj.Film.Plakat = uniqePosterName;
+            obj.Film.DataDodania = DateTime.Now;
+            db.Filmy.Add(obj.Film);
+            db.SaveChanges();
             return RedirectToAction("DodajFilm");
         }
     }

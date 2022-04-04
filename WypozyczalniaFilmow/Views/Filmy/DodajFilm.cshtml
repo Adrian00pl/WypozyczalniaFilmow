@@ -1,10 +1,9 @@
 ﻿@model WypozyczalniaFilmow.Models.DodawanieViewModel
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 @{Layout = "_Layout";
 
 }
-@using (Html.BeginForm("DodajFilm","Filmy",FormMethod.Post))
-            {
+@using (Html.BeginForm("DodajFilm","Filmy",FormMethod.Post, new { enctype="multipart/form-data"}))
+{
 <table>
     <tr>
         <td>
@@ -40,11 +39,27 @@
     </tr>
     <tr>
         <td>
-            Rezyzer:
+            Długość filmu:
         </td>
         <td>
             @Html.TextBoxFor(f => f.Film.DlFilmu)
         </td>
     </tr>
+    <tr>
+        @foreach( var kategoria in Model.Kategorie)
+                {
+                    <td>@kategoria.Nazwa</td>
+                    <td>@Html.RadioButtonFor(f=>f.Film.KategoriaId,kategoria.Id)</td>
+                }
+    </tr>
+    <tr>
+        <td> @Html.LabelFor(f => f.Film.Plakat, "Dodaj Plakat")</td>
+       <td>
+           @Html.TextBoxFor(f=>f.Plakat, new {@type = "file"})
+       </td>
+    </tr>
 </table>
+<button type="submit">
+Dodaj
+</button>
             }
