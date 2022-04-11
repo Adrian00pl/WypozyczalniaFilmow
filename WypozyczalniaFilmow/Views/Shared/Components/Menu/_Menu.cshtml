@@ -5,4 +5,9 @@
         <a href="@Url.Action("Lista","Filmy",new { nazwaKategori = kategoria.Nazwa})">@kategoria.Nazwa</a>
     }
     <a href="@Url.Action("Wszystkie","Filmy")">Wszystkie</a>
+    @using (Html.BeginForm("Szukaj", "Filmy"))
+            {
+                @Html.TextBox("tekst")
+        <button type="submit">Szukaj</button>
+            }
 </header>

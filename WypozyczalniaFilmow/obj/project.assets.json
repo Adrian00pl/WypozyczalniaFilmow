@@ -5797,7 +5797,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\110\\.nuget\\packages\\": {},
+    "C:\\Users\\109\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
@@ -5805,11 +5805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\110\\source\\repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\WypozyczalniaFilmow.csproj",
+      "projectUniqueName": "C:\\Users\\109\\Source\\Repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\WypozyczalniaFilmow.csproj",
       "projectName": "WypozyczalniaFilmow",
-      "projectPath": "C:\\Users\\110\\source\\repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\WypozyczalniaFilmow.csproj",
-      "packagesPath": "C:\\Users\\110\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\110\\source\\repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\obj\\",
+      "projectPath": "C:\\Users\\109\\Source\\Repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\WypozyczalniaFilmow.csproj",
+      "packagesPath": "C:\\Users\\109\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\109\\Source\\Repos\\WypozyczalniaFilmow\\WypozyczalniaFilmow\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5817,7 +5817,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\109\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"

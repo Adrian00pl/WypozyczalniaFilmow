@@ -1,6 +1,6 @@
-﻿@model Film
+﻿@model WypozyczalniaFilmow.Models.Film
+@using (Html.BeginForm()) { 
 
-<button onclick="window.location.href='@Url.Action("EdytujFilm","Filmy", new {id=Model.Id })'">Edytuj</button>
 <table>
     <thead>
 
@@ -8,23 +8,27 @@
     <tbody>
         <tr>
             <td>
-                @Model.Tytul
+                @Html.TextBoxFor(f=>f.Tytul)
             </td>
             <td>
                 <ul>
                     <li><img src="~/Grafiki/@Model.Plakat" style="width:150px" /></li>
                     <li>
-                        @Model.Rezyser
+                        @Html.TextBoxFor(f => f.Rezyser)
                     </li>
                     <li>
-                        @Model.Opis
+                        @Html.TextAreaFor(f => f.Opis)
                     </li>
                     <li>
-                        @Model.Cena
+                        @Html.TextBoxFor(f => f.Cena)
                     </li>
-                
+                    <li>
+                        @Html.TextBoxFor(f => f.DlFilmu)
+                    </li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
+<button type="submit">Zatwierdz</button>
+}
