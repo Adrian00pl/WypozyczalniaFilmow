@@ -25,7 +25,16 @@ namespace WypozyczalniaFilmow
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 4;
+            }).AddEntityFrameworkStores<IdentityAppContext>();
             services.AddControllersWithViews();
+            services.AddDbContext<IdentityAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("filmyCS")));
             services.AddDbContext<FilmyContext>(options => options.UseSqlServer(Configuration.GetConnectionString("filmyCS")));
             services.AddSession();
         }
@@ -49,6 +58,7 @@ namespace WypozyczalniaFilmow
             app.UseRouting();
             app.UseSession();
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

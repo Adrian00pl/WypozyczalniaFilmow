@@ -10,4 +10,12 @@
                 @Html.TextBox("tekst")
         <button type="submit">Szukaj</button>
             }
+    @if (User.Identity.IsAuthenticated)
+            {
+                <a href="@Url.Action("Logout","Account")">@User.Identity.Name</a>
+            }
+            else
+            {
+                <a href="@Url.Action("Login","Account")">Login</a>
+            }
 </header>

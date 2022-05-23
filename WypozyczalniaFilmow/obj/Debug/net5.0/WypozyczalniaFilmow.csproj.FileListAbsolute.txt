@@ -229,3 +229,10 @@ C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Filmy\Szukaj.cshtml.g.cs
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Filmy\EdytujFilm.cshtml.g.cs
 C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Koszyk\Index.cshtml.g.cs
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\109\Source\Repos\WypozyczalniaFilmow\WypozyczalniaFilmow\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
